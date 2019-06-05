@@ -2,4 +2,5 @@
 
 ## todo
 
-[ ] hyperapp
+- [ ] Svelte
+- [ ] CircleCi

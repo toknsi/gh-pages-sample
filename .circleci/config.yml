@@ -1,5 +1,21 @@
 version: 2.1
+executors:
+  default:
+    working_directory: ~/workspace
+    docker:
+      - image: node:12
 jobs:
+  setup:
+    executor:
+      name: default
+    steps:
+      - run:
+          name: Install dependencies
+          command: npm install
   test:
-    override:
-      - echo "Hello World"
+    executor:
+      name: default
+    steps:
+      - run:
+          name: Test
+          command: echo "hello"
